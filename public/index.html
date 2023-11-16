@@ -12,78 +12,107 @@
         <title>Chirp Landing Page</title>
     </head>
     <body class="font-inter">
-        <header class="p-5">
+        <header class="p-5 md:px-8 md:py-12 lg:px-32 lg:py-14">
             <div class="flex justify-between items-center">
                 <h1>
                     <a
                         href="#"
-                        class="text-eastern-blue font-bold text-xl italic"
+                        class="text-dodger-blue-100 font-bold text-xl italic"
                         >Chirp.</a
                     >
                 </h1>
-
-                <button>
-                    <embed
-                        type="image/svg+xml"
-                        src="./assets/images/icons/hamburger-menu.svg"
-                    />
-                </button>
-            </div>
-            <div class="absolute top-0 left-0 right-0 bottom-0 w-full">
-                <div class="p-5 flex justify-between items-center border-b">
-                    <h1>
-                        <a
-                            href="#"
-                            class="text-eastern-blue font-bold text-xl italic"
-                            >Chirp.</a
-                        >
-                    </h1>
-                    <button type="menu">
-                        <embed
-                            type="image/svg+xml"
-                            src="./assets/images/icons/close.svg"
-                        />
-                    </button>
-                </div>
-                <nav>
-                    <ul class="flex flex-col">
-                        <li class="">
+                <nav class="hidden md:block">
+                    <ul class="flex items-center gap-1">
+                        <li>
                             <a
                                 href="#home"
-                                class="px-6 py-4 text-gray-700 block border-b"
+                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
                                 >Home</a
                             >
                         </li>
                         <li>
                             <a
-                                href="#home"
-                                class="px-6 py-4 text-gray-700 block border-b"
+                                href="#pricing"
+                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
                                 >Pricing</a
                             >
                         </li>
                         <li>
                             <a
-                                href="#home"
-                                class="px-6 py-4 text-gray-700 block border-b"
+                                href="#faq"
+                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
                                 >FAQ</a
                             >
                         </li>
                         <li>
                             <a
                                 href="#home"
-                                class="text-white font-semibold bg-eastern-blue flex gap-3 px-6 py-4"
-                            >
-                                <embed
+                                class="text-white font-semibold bg-dodger-blue-100 hover:bg-dodger-blue-60 px-5 py-3 rounded flex gap-3 transition-colors"
+                                ><embed
                                     type="image/svg+xml"
                                     src="./assets/images/icons/twitter.svg"
-                                />
-                                Sign in with Twitter</a
+                                />Sign in with Twitter</a
                             >
                         </li>
                     </ul>
                 </nav>
+                <div class="md:hidden">
+                    <button type="menu" id="open-menu-button">
+                        <embed
+                            type="image/svg+xml"
+                            src="./assets/images/icons/hamburger-menu.svg"
+                        />
+                    </button>
+                    <button type="menu" id="close-menu-button" class="hidden">
+                        <embed
+                            type="image/svg+xml"
+                            src="./assets/images/icons/close.svg"
+                        />
+                    </button>
+                </div>
             </div>
         </header>
+        <aside
+            class="absolute top-16 left-0 right-0 bottom-0 bg-gray-50 w-full md:hidden"
+        >
+            <nav>
+                <ul class="flex flex-col">
+                    <li class="">
+                        <a
+                            href="#home"
+                            class="px-6 py-4 text-gray-700 block border-b"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#home"
+                            class="px-6 py-4 text-gray-700 block border-b"
+                            >Pricing</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#home"
+                            class="px-6 py-4 text-gray-700 block border-b"
+                            >FAQ</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#home"
+                            class="text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-4"
+                        >
+                            <embed
+                                type="image/svg+xml"
+                                src="./assets/images/icons/twitter.svg"
+                            />
+                            Sign in with Twitter</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </aside>
         <main></main>
         <footer></footer>
     </body>
