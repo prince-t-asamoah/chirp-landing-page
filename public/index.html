@@ -9,6 +9,10 @@
             content="landing page, website, web page, online presence, digital marketing"
         />
         <link href="./assets/css/main.min.css" rel="stylesheet" />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+        ></script>
         <title>Chirp Landing Page</title>
     </head>
     <body class="font-inter">
@@ -21,12 +25,13 @@
                         >Chirp.</a
                     >
                 </h1>
-                <nav class="hidden md:block">
+                <nav class="hidden md:block" aria-label="main navigation">
                     <ul class="flex items-center gap-1">
                         <li>
                             <a
                                 href="#home"
                                 class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
+                                aria-current="page"
                                 >Home</a
                             >
                         </li>
@@ -48,6 +53,7 @@
                             <a
                                 href="#home"
                                 class="text-white font-semibold bg-dodger-blue-100 hover:bg-dodger-blue-60 px-5 py-3 rounded flex gap-3 transition-colors"
+                                role="button"
                                 ><embed
                                     type="image/svg+xml"
                                     src="./assets/images/icons/twitter.svg"
@@ -56,63 +62,89 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="md:hidden">
-                    <button type="menu" id="open-menu-button">
-                        <embed
-                            type="image/svg+xml"
-                            src="./assets/images/icons/hamburger-menu.svg"
-                        />
+                <div x-data="{ isOpen: false }" class="md:hidden">
+                    <button
+                        type="button"
+                        class="text-gray-500 w-12 h-12 relative focus:outline-none bg-white flex items-center justify-center"
+                        @click="isOpen = !isOpen"
+                        aria-expanded="false"
+                        aria-controls="mobile-navigation"
+                        aria-label="open menu"
+                    >
+                        <span class="sr-only">Open main menu</span>
+                        <div
+                            class="block w-5 absolute transform -translate-x-1/2 -translate-y-1/2"
+                        >
+                            <span
+                                aria-hidden="true"
+                                class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+                                :class="{'rotate-45': isOpen,' -translate-y-1.5': !isOpen }"
+                            ></span>
+                            <span
+                                aria-hidden="true"
+                                class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+                                :class="{'opacity-0': isOpen } "
+                            ></span>
+                            <span
+                                aria-hidden="true"
+                                class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+                                :class="{'-rotate-45': isOpen, ' translate-y-1.5': !isOpen}"
+                            ></span>
+                        </div>
                     </button>
-                    <button type="menu" id="close-menu-button" class="hidden">
-                        <embed
-                            type="image/svg+xml"
-                            src="./assets/images/icons/close.svg"
-                        />
-                    </button>
+
+                    <nav
+                        id="mobile-navigation"
+                        class="absolute top-20 left-0 right-0 bottom-0 bg-gray-50 w-full transition-all"
+                        aria-label="main navigation"
+                        x-show="isOpen"
+                        x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+                        x-transition:enter-start="-translate-x-full"
+                        x-transition:enter-end="translate-x-0"
+                        x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+                        x-transition:leave-start="translate-x-0"
+                        x-transition:leave-end="-translate-x-full"
+                    >
+                        <ul class="flex flex-col">
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="px-6 py-4 text-gray-700 block border-b"
+                                    aria-cu
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="px-6 py-4 text-gray-700 block border-b"
+                                    >Pricing</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="px-6 py-4 text-gray-700 block border-b"
+                                    >FAQ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-4"
+                                >
+                                    <embed
+                                        type="image/svg+xml"
+                                        src="./assets/images/icons/twitter.svg"
+                                    />
+                                    Sign in with Twitter</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
-        <aside
-            class="absolute top-16 left-0 right-0 bottom-0 bg-gray-50 w-full md:hidden"
-        >
-            <nav>
-                <ul class="flex flex-col">
-                    <li class="">
-                        <a
-                            href="#home"
-                            class="px-6 py-4 text-gray-700 block border-b"
-                            >Home</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#home"
-                            class="px-6 py-4 text-gray-700 block border-b"
-                            >Pricing</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#home"
-                            class="px-6 py-4 text-gray-700 block border-b"
-                            >FAQ</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#home"
-                            class="text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-4"
-                        >
-                            <embed
-                                type="image/svg+xml"
-                                src="./assets/images/icons/twitter.svg"
-                            />
-                            Sign in with Twitter</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </aside>
         <main></main>
         <footer></footer>
     </body>
