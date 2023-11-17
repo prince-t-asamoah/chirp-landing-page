@@ -6,6 +6,9 @@ module.exports = {
             fontFamily: {
                 inter: ['Inter', 'sans-serif'],
             },
+            fontSize: {
+                32: ['2rem', '2.5rem'],
+            },
             colors: {
                 'dodger-blue': {
                     100: '#1da1f2',
