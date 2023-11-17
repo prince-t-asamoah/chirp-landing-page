@@ -23,6 +23,7 @@ module.exports = {
                     10: '#e8f6fe',
                 },
                 'vanilla-whisper': '#fbf8f3',
+                bateau: '#1f7898',
             },
         },
     },
