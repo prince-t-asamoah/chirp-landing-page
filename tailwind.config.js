@@ -19,6 +19,7 @@ module.exports = {
                     20: '#d2ecfc',
                     10: '#e8f6fe',
                 },
+                'vanilla-whisper': '#fbf8f3',
             },
         },
     },
