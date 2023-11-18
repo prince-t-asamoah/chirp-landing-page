@@ -8,6 +8,7 @@ module.exports = {
             },
             fontSize: {
                 32: ['2rem', '2.5rem'],
+                62: ['3.875rem', '1.25'],
             },
             colors: {
                 'dodger-blue': {
