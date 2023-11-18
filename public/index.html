@@ -148,11 +148,21 @@
             </div>
         </header>
         <main>
-            <section class="px-5 py-3 bg-vanilla-whisper">
+            <section class="px-5 py-3 md:px-8 bg-vanilla-whisper flex flex-col gap-5 md:gap-10">
                 <div>
-                    <img src="./assets/images/mobile-hero-image.png" alt="" />
+                    <img
+                        src="./assets/images/mobile-hero-image.png"
+                        class="w-full md:hidden"
+                        alt="hero image"
+                    />
+
+                    <img
+                        src="./assets/images/desktop-hero-image.png"
+                        class="w-full hidden md:block"
+                        alt="hero image"
+                    />
                 </div>
-                <div class="py-9">
+                <div>
                     <h2 class="text-32 font-extrabold">
                         Twitter analytics taken to a whole new level.
                     </h2>
