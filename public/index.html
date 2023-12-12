@@ -17,7 +17,7 @@
     </head>
     <body class="font-inter">
         <header
-            class="p-5 md:px-8 md:py-12 lg:px-32 lg:py-14 bg-vanilla-whisper"
+            class="p-5 md:px-8 md:py-12 lg:px-32 lg:py-10 bg-vanilla-whisper"
         >
             <div class="flex justify-between items-center">
                 <h1>
@@ -54,13 +54,14 @@
                         <li>
                             <a
                                 href="#home"
-                                class="text-white font-semibold bg-dodger-blue-100 hover:bg-dodger-blue-60 px-5 py-3 rounded flex gap-3 transition-colors"
-                                role="button"
-                                ><embed
+                                class="text-white md:text-xl lg:text-base py-4 px-5 bg-dodger-blue-100 hover:bg-dodger-blue-80 transition-colors rounded-md flex justify-center items-center gap-3"
+                            >
+                                <embed
                                     type="image/svg+xml"
                                     src="./assets/images/icons/twitter.svg"
-                                />Sign in with Twitter</a
-                            >
+                                />
+                                Sign in with Twitter
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -94,7 +95,6 @@
                             ></span>
                         </div>
                     </button>
-
                     <nav
                         id="mobile-navigation"
                         class="absolute top-20 left-0 right-0 bottom-0 bg-gray-50 w-full transition-all"
@@ -133,7 +133,7 @@
                             <li>
                                 <a
                                     href="#home"
-                                    class="text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-4"
+                                    class=" text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-3"
                                 >
                                     <embed
                                         type="image/svg+xml"
@@ -149,7 +149,7 @@
         </header>
         <main>
             <section
-                class="px-5 py-3 md:px-8 lg:px-32 bg-vanilla-whisper flex flex-col lg:flex-row-reverse gap-5 md:gap-10 lg:gap-0"
+                class="px-5 py-3 md:px-8 lg:px-32 lg:pt-0 bg-vanilla-whisper flex flex-col lg:flex-row-reverse gap-5 md:gap-10 lg:gap-0"
             >
                 <div class="lg:w-5/12">
                     <img
@@ -164,36 +164,40 @@
                         alt="hero image"
                     />
                 </div>
-                <div class="lg:w-7/12">
-                    <h2 class="text-32 md:text-62 font-extrabold">
+                <div class="lg:w-7/12 lg:pt-10 lg:pr-14">
+                    <h2
+                        class="text-32 md:text-62 lg:text-5xl lg:leading-tight font-extrabold"
+                    >
                         Twitter analytics taken to a whole new level.
                     </h2>
                     <p
-                        class="text-md md:text-xl md:leading-relaxed py-1.5 text-gray-400"
+                        class="md:text-xl md:leading-relaxed lg:text-base py-1.5 text-gray-400"
                     >
                         Chirp is a suite of Twitter analytics that will help you
                         better understand your audience, which tweets they like,
                         and most importantly, when they are the most active on
                         Twitter.
                     </p>
-                    <p class="py-2.5 text-center flex flex-col">
+                    <p
+                        class="py-2.5 text-center flex flex-col md:flex-row md:gap-4"
+                    >
                         <a
                             href="#home"
-                            class="text-white font-semibold bg-dodger-blue-100 rounded flex justify-center"
+                            class="text-white md:text-xl lg:text-base py-3 md:px-5 md:py-4  bg-dodger-blue-100 hover:bg-dodger-blue-80 transition-colors rounded-md flex justify-center items-center gap-3"
                         >
-                            <span class="flex gap-3 px-6 py-4">
-                                <embed
-                                    type="image/svg+xml"
-                                    src="./assets/images/icons/twitter.svg"
-                                />
-                                Sign in with Twitter
-                            </span>
+                            <embed
+                                type="image/svg+xml"
+                                src="./assets/images/icons/twitter.svg"
+                            />
+                            Sign in with Twitter
                         </a>
-                        <a href="http://" class="text-bateau font-bold py-4"
-                            >Learn more</a
+                        <a href="http://" class="text-dodger-blue-100 font-semibold py-4 lg:hover:underline flex justify-center items-center gap-2"
+                            >Learn more
+                            <embed type="image/svg+xml" src="./assets/images/icons/right-arrow.svg" class="flex-none"/>
+                            </a
                         >
                     </p>
-                    <ul class="flex">
+                    <ul class="flex md:py-5">
                         <li
                             class="rounded-full flex justify-center items-center relative -ml-0.5"
                         >
