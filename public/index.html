@@ -15,9 +15,11 @@
         ></script>
         <title>Chirp Landing Page</title>
     </head>
-    <body class="font-inter">
+    <body class="font-inter" x-data="{showNavBar: false}">
         <header
-            class="p-5 md:px-8 md:py-12 lg:px-32 xl:px-36 lg:py-10 bg-vanilla-whisper"
+            class="p-5 pb-5 md:px-8 md:py-5 lg:px-32 xl:px-36 lg:pt-10 bg-vanilla-whisper sticky top-0 z-20"
+            :class="{ 'bg-white shadow transition duration-500' : showNavBar }"
+            @scroll.window="showNavBar = (window.pageYOffset > 20) ? true : false"
         >
             <div class="flex justify-between items-center">
                 <h1>
@@ -93,7 +95,7 @@
                     </button>
                     <nav
                         id="mobile-navigation"
-                        class="absolute top-20 left-0 right-0 bottom-0 bg-gray-50 w-full transition-all"
+                        class="absolute top-20 left-0 right-0 bottom-0 bg-gray-50 w-full transition-all z-50"
                         aria-label="main navigation"
                         x-show="isOpen"
                         x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -145,7 +147,7 @@
         </header>
         <main>
             <section
-                class="px-5 pt-3 pb-8 lg:pb-14 md:px-8 lg:px-32 xl:px-36 lg:pt-0 bg-vanilla-whisper flex flex-col lg:justify-between lg:flex-row-reverse gap-5 md:gap-10"
+                class="px-5 pt-5 lg:pt-10 pb-10 lg:pb-14 md:px-8 lg:px-32 xl:px-36 bg-vanilla-whisper flex flex-col lg:justify-between lg:flex-row-reverse gap-5 md:gap-10"
             >
                 <div class="lg:w-[700px]">
                     <img
@@ -160,7 +162,7 @@
                         alt="hero image"
                     />
                 </div>
-                <div class="">
+                <div class="lg:pt-10">
                     <h2
                         class="text-32 md:text-62 lg:text-5xl lg:leading-tight font-extrabold"
                     >
