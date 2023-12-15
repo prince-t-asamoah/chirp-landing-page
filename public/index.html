@@ -16,12 +16,14 @@
         <title>Chirp Landing Page</title>
     </head>
     <body class="font-inter" x-data="{showNavBar: false}">
+        <!-- Top Bar Header-->
         <header
             class="p-5 pb-5 md:px-8 md:py-5 lg:px-32 xl:px-36 lg:pt-10 bg-vanilla-whisper sticky top-0 z-20"
             :class="{ 'bg-white shadow transition duration-500' : showNavBar }"
             @scroll.window="showNavBar = (window.pageYOffset > 20) ? true : false"
         >
             <div class="flex justify-between items-center">
+                <!-- Product Logo -->
                 <h1>
                     <a
                         href="#"
@@ -29,6 +31,7 @@
                         >Chirp.</a
                     >
                 </h1>
+                <!-- Desktop Navigation -->
                 <nav class="hidden md:block" aria-label="main navigation">
                     <ul class="flex items-center gap-1">
                         <li>
@@ -67,6 +70,7 @@
                         </li>
                     </ul>
                 </nav>
+                <!-- Mobile Navigation -->
                 <div x-data="{ isOpen: false }" class="md:hidden">
                     <button
                         class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white"
@@ -146,6 +150,7 @@
             </div>
         </header>
         <main>
+            <!-- Hero Section -->
             <section
                 class="px-5 pt-5 lg:pt-10 pb-10 lg:pb-14 md:px-8 lg:px-32 xl:px-36 bg-vanilla-whisper flex flex-col lg:justify-between lg:flex-row-reverse gap-5 md:gap-10"
             >
@@ -294,6 +299,7 @@
                     </p>
                 </div>
             </section>
+            <!-- Features Section -->
             <section class="py-16 lg:py-20 px-5 md:px-8 lg:px-32 xl:px-36">
                 <h2 class="text-32 font-extrabold md:hidden">
                     Features that help <br />you tweet smarter.
@@ -354,6 +360,7 @@
                     </li>
                 </ul>
             </section>
+            <!-- Reviews Section -->
             <section
                 class="px-5 py-10 md:py-14 md:px-8 lg:px-32 xl:px-36 bg-dodger-blue-10 md:overflow-hidden lg:flex lg:flex-col lg:items-center"
             >
@@ -487,6 +494,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Pricing Section -->
             <section
                 class="py-16 lg:py-20 px-5 md:px-8 lg:px-32 xl:px-36 md:flex md:flex-col md:items-center"
             >
