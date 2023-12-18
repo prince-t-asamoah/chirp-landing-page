@@ -160,3 +160,59 @@
 .features .features p {
     @apply text-gray-400;
 }
+
+/*Reviews section*/
+#reviews {
+    @apply px-5 py-10 md:py-14 md:px-8 lg:px-32 xl:px-36 bg-dodger-blue-10 md:overflow-hidden lg:flex lg:flex-col lg:items-center;
+}
+
+#reviews h2 {
+    @apply text-3xl font-extrabold;
+}
+
+#reviews .customers {
+    @apply mt-10 flex flex-col md:flex-row gap-5 md:w-[1500px] lg:w-fit;
+}
+
+#reviews .customers .customer {
+    @apply bg-white p-5 md:p-6 rounded md:w-[320px] md:h-fit;
+}
+
+#reviews .customer .header {
+    @apply flex gap-2;
+}
+
+#reviews .customer .header .photo {
+    @apply flex place-items-center;
+}
+
+#reviews .customer .header .username {
+    @apply flex-grow;
+}
+
+#reviews .customer .header .username span:first-child {
+    @apply block font-bold;
+}
+
+#reviews .customer .header .username span:last-child {
+    @apply text-sm block text-gray-400;
+}
+
+#reviews .customer .header .twitter-logo {
+    @apply flex place-items-center;
+}
+#reviews .customer .body {
+    @apply mt-3;
+}
+
+#reviews .customer .body p {
+    @apply text-gray-400;
+}
+
+#reviews .customer .footer {
+    @apply flex justify-between items-center mt-5 text-gray-500;
+}
+
+#reviews .customer .footer span:first-child {
+    @apply inline-flex gap-1 items-center;
+}
