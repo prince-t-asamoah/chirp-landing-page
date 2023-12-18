@@ -6,3 +6,68 @@
     font-family: 'Inter';
     src: url('../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
 }
+
+/*Header Navigation Bar*/
+.header-navbar {
+    @apply p-5 pb-5 md:px-8 md:py-5 lg:px-32 xl:px-36 lg:pt-10 sticky top-0 z-20;
+}
+
+.header-navigation {
+    @apply flex justify-between items-center;
+}
+
+.header-navigation .logo a {
+    @apply text-dodger-blue-100 font-bold text-xl italic;
+}
+
+.header-navigation .desktop {
+    @apply hidden md:block;
+}
+
+.header-navigation .desktop ul {
+    @apply flex items-center gap-1;
+}
+
+.header-navigation .desktop a.navlink {
+    @apply px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors;
+}
+
+.header-navigation .desktop a.cta-navlink {
+    @apply text-white md:text-xl lg:text-base py-4 px-5 bg-dodger-blue-100 hover:bg-dodger-blue-80 transition-colors rounded-md flex justify-center items-center gap-3;
+}
+
+.header-navigation .mobile {
+    @apply md:hidden;
+}
+
+.header-navigation .mobile .menu-button {
+    @apply bg-white text-gray-500 w-10 h-10 relative focus:outline-none;
+}
+
+.header-navigation .mobile .menu-text {
+    @apply sr-only;
+}
+
+.header-navigation .mobile .hamburger {
+    @apply block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.header-navigation .mobile .hamburger-bar {
+    @apply block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out;
+}
+
+.header-navigation .mobile .mobile-navigation {
+    @apply absolute top-20 left-0 right-0 bottom-0 bg-gray-50 w-full h-screen transition-all z-50;
+}
+
+.header-navigation .mobile-navigation ul {
+    @apply flex flex-col;
+}
+
+.header-navigation .mobile-navigation a.navlink {
+    @apply px-6 py-4 text-gray-700 block border-b;
+}
+
+.header-navigation .mobile-navigation a.cta-link {
+    @apply text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-3;
+}

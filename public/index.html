@@ -18,56 +18,33 @@
     <body class="font-inter" x-data="{showNavBar: false}">
         <!-- Top Bar Header-->
         <header
-            class="p-5 pb-5 md:px-8 md:py-5 lg:px-32 xl:px-36 lg:pt-10 bg-vanilla-whisper sticky top-0 z-20"
-            :class="{ 'bg-white shadow transition duration-500' : showNavBar }"
+            :class="[ showNavBar ? 'header-navbar bg-white' :  'header-navbar bg-vanilla-whisper']"
             @scroll.window="showNavBar = (window.pageYOffset > 20) ? true : false"
         >
-            <div class="flex justify-between items-center">
+            <div class="header-navigation">
                 <!-- Product Logo -->
-                <h1>
-                    <a
-                        href="#"
-                        class="text-dodger-blue-100 font-bold text-xl italic"
-                        >Chirp.</a
-                    >
-                </h1>
+                <nav aria-label="Go to home" class="logo">
+                    <a href="#">Chirp.</a>
+                </nav>
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:block" aria-label="main navigation">
-                    <ul class="flex items-center gap-1">
+                <nav class="desktop" aria-label="main navigation">
+                    <ul>
                         <li>
-                            <a
-                                href="#"
-                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
-                                aria-current="page"
+                            <a href="#" class="navlink" aria-current="page"
                                 >Home</a
                             >
                         </li>
                         <li>
-                            <a
-                                href="#features"
-                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
-                                >Features</a
-                            >
+                            <a href="#features" class="navlink">Features</a>
                         </li>
                         <li>
-                            <a
-                                href="#reviews"
-                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
-                                >Reviews</a
-                            >
+                            <a href="#reviews" class="navlink">Reviews</a>
                         </li>
                         <li>
-                            <a
-                                href="#pricing"
-                                class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded transition-colors"
-                                >Pricing</a
-                            >
+                            <a href="#pricing" class="navlink">Pricing</a>
                         </li>
                         <li>
-                            <a
-                                href="#"
-                                class="text-white md:text-xl lg:text-base py-4 px-5 bg-dodger-blue-100 hover:bg-dodger-blue-80 transition-colors rounded-md flex justify-center items-center gap-3"
-                            >
+                            <a href="#" class="cta-navlink">
                                 <embed
                                     type="image/svg+xml"
                                     src="./assets/images/icons/twitter.svg"
@@ -78,35 +55,29 @@
                     </ul>
                 </nav>
                 <!-- Mobile Navigation -->
-                <div x-data="{ isOpen: false }" class="md:hidden">
-                    <button
-                        class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white"
-                        @click="isOpen = !isOpen"
-                    >
-                        <span class="sr-only">Open main menu</span>
-                        <div
-                            class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                        >
+                <div class="mobile" x-data="{ isOpen: false }">
+                    <button class="menu-button" @click="isOpen = !isOpen">
+                        <span class="menu-text">Open main menu</span>
+                        <div class="hamburger">
                             <span
                                 aria-hidden="true"
-                                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                                class="hamburger-bar"
                                 :class="{'rotate-45': isOpen,' -translate-y-1.5': !isOpen }"
                             ></span>
                             <span
                                 aria-hidden="true"
-                                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                                class="hamburger-bar"
                                 :class="{'opacity-0': isOpen } "
                             ></span>
                             <span
                                 aria-hidden="true"
-                                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                                class="hamburger-bar"
                                 :class="{'-rotate-45': isOpen, ' translate-y-1.5': !isOpen}"
                             ></span>
                         </div>
                     </button>
                     <nav
-                        id="mobile-navigation"
-                        class="absolute top-20 left-0 right-0 bottom-0 bg-gray-50 w-full h-screen transition-all z-50"
+                        class="mobile-navigation"
                         aria-label="main navigation"
                         x-show="isOpen"
                         x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -116,41 +87,21 @@
                         x-transition:leave-start="translate-x-0"
                         x-transition:leave-end="-translate-x-full"
                     >
-                        <ul class="flex flex-col">
+                        <ul>
                             <li>
-                                <a
-                                    href="#"
-                                    class="px-6 py-4 text-gray-700 block border-b"
-                                    aria-cu
-                                    >Home</a
-                                >
+                                <a href="#" class="navlink" aria-cu>Home</a>
                             </li>
                             <li>
-                                <a
-                                    href="#features"
-                                    class="px-6 py-4 text-gray-700 block border-b"
-                                    >Features</a
-                                >
+                                <a href="#features" class="navlink">Features</a>
                             </li>
                             <li>
-                                <a
-                                    href="#reviews"
-                                    class="px-6 py-4 text-gray-700 block border-b"
-                                    >Reviews</a
-                                >
+                                <a href="#reviews" class="navlink">Reviews</a>
                             </li>
                             <li>
-                                <a
-                                    href="#pricing"
-                                    class="px-6 py-4 text-gray-700 block border-b"
-                                    >Pricing</a
-                                >
+                                <a href="#pricing" class="navlink">Pricing</a>
                             </li>
                             <li>
-                                <a
-                                    href="#home"
-                                    class="text-white font-semibold bg-dodger-blue-100 flex gap-3 px-6 py-3"
-                                >
+                                <a href="#home" class="cta-link">
                                     <embed
                                         type="image/svg+xml"
                                         src="./assets/images/icons/twitter.svg"
