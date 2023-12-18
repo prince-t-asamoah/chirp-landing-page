@@ -131,3 +131,32 @@
 .hero .cta-section .summary {
     @apply mt-5 md:text-xl md:leading-relaxed lg:text-base text-gray-400 md:w-8/12 lg:w-10/12;
 }
+
+/*Features section*/
+.features {
+    @apply py-16 lg:py-20 px-5 md:px-8 lg:px-32 xl:px-36;
+}
+
+.features h2 {
+    @apply text-3xl lg:leading-tight font-extrabold;
+}
+
+.features .features-list {
+    @apply mt-6 md:mt-8 lg:mt-6 grid lg:grid-cols-2 gap-5 lg:gap-8;
+}
+
+.features .features-item {
+    @apply p-4 border border-gray-300 rounded-md flex flex-col gap-2.5;
+}
+
+.features .features-item span {
+    @apply text-3xl;
+}
+
+.features .features-item h3 {
+    @apply font-bold;
+}
+
+.features .features p {
+    @apply text-gray-400;
+}
