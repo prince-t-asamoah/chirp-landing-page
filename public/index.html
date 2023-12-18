@@ -18,7 +18,7 @@
     <body class="font-inter" x-data="{showNavBar: false}">
         <!-- Top Bar Header-->
         <header
-            :class="[ showNavBar ? 'header-navbar bg-white' :  'header-navbar bg-vanilla-whisper']"
+            :class="[ showNavBar ? 'header-navbar-sticky' :  'header-navbar-default']"
             @scroll.window="showNavBar = (window.pageYOffset > 20) ? true : false"
         >
             <div class="header-navigation">
@@ -116,52 +116,36 @@
         </header>
         <main>
             <!-- Hero Section -->
-            <section
-                class="px-5 pt-5 lg:pt-10 pb-10 lg:pb-14 md:px-8 lg:px-32 xl:px-36 bg-vanilla-whisper flex flex-col lg:justify-between lg:flex-row-reverse gap-5 md:gap-10"
-            >
-                <div class="lg:w-[700px]">
+            <section class="hero">
+                <div class="image">
                     <img
                         src="./assets/images/mobile-hero-image.png"
-                        class="w-full h-auto md:hidden lg:block"
+                        class="mobile"
                         alt="hero image"
                     />
-
                     <img
                         src="./assets/images/desktop-hero-image.png"
-                        class="w-full hidden md:block lg:hidden"
+                        class="desktop"
                         alt="hero image"
                     />
                 </div>
-                <div class="lg:pt-10">
-                    <h2
-                        class="text-32 md:text-62 lg:text-5xl lg:leading-tight font-extrabold"
-                    >
-                        Twitter analytics taken to a whole new level.
-                    </h2>
-                    <p
-                        class="md:text-xl md:leading-relaxed lg:text-base py-1.5 text-gray-400"
-                    >
+                <div class="cta-section">
+                    <h1>Twitter analytics taken to a whole new level.</h1>
+                    <p class="intro">
                         Chirp is a suite of Twitter analytics that will help you
                         better understand your audience, which tweets they like,
                         and most importantly, when they are the most active on
                         Twitter.
                     </p>
-                    <p
-                        class="py-2.5 text-center flex flex-col md:flex-row md:gap-4"
-                    >
-                        <a
-                            href="#home"
-                            class="text-white md:text-xl lg:text-base py-3 md:px-5 md:py-4 bg-dodger-blue-100 hover:bg-dodger-blue-80 transition-colors rounded-md flex justify-center items-center gap-3"
-                        >
+                    <p class="buttons">
+                        <a href="#home" class="primary-button">
                             <embed
                                 type="image/svg+xml"
                                 src="./assets/images/icons/twitter.svg"
                             />
                             Sign in with Twitter
                         </a>
-                        <a
-                            href="http://"
-                            class="text-dodger-blue-100 font-semibold py-4 lg:hover:underline flex justify-center items-center gap-2"
+                        <a href="http://" class="secondary-button"
                             >Learn more
                             <embed
                                 type="image/svg+xml"
@@ -170,58 +154,44 @@
                             />
                         </a>
                     </p>
-                    <ul class="flex md:mt-5">
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-0.5"
-                        >
+                    <ul class="customers">
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar09.svg"
                                 alt="avatars"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar08.svg"
                                 alt="avatars"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar07.svg"
                                 alt="avatar"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar06.svg"
                                 alt="avatar"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar05.svg"
                                 alt="avatar"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar04.svg"
                                 alt="avatar"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar03.svg"
                                 alt="avatar"
@@ -235,30 +205,17 @@
                                 alt="avatar"
                             />
                         </li>
-                        <li
-                            class="rounded-full flex justify-center items-center relative -ml-6"
-                        >
+                        <li>
                             <img
                                 src="./assets/images/avatars/userAvatar01.svg"
                                 alt="avatar"
                             />
                         </li>
                     </ul>
-                    <p
-                        class="mt-5 md:text-xl md:leading-relaxed lg:text-base text-gray-400 md:hidden"
-                    >
+                    <p class="summary">
                         Join
                         <strong class="text-dodger-blue-100">195</strong> others
                         who have analyzed their followers and scheduled
-                        <strong class="text-dodger-blue-100">1342</strong>
-                        tweets!
-                    </p>
-                    <p
-                        class="mt-5 md:text-xl md:leading-relaxed lg:text-base text-gray-400 hidden md:block"
-                    >
-                        Join
-                        <strong class="text-dodger-blue-100">195</strong> others
-                        who have analyzed their followers and <br />scheduled
                         <strong class="text-dodger-blue-100">1342</strong>
                         tweets!
                     </p>
