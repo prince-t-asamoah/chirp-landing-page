@@ -216,3 +216,60 @@
 #reviews .customer .footer span:first-child {
     @apply inline-flex gap-1 items-center;
 }
+
+/*Pricing Section*/
+#pricing {
+    @apply py-16 lg:py-20 px-5 md:px-8 lg:px-32 xl:px-36 md:flex md:flex-col md:items-center;
+}
+
+#pricing .description {
+    @apply text-center;
+}
+
+#pricing .description h2 {
+    @apply text-3xl font-extrabold;
+}
+
+#pricing .description p {
+    @apply mt-2 text-gray-400;
+}
+
+#pricing .billing {
+    @apply border border-orange-400 bg-orange-50 px-3 lg:px-3 py-7 rounded-md mt-10 md:w-[500px];
+}
+
+#pricing .billing .header {
+    @apply border-b border-b-gray-300 pb-5 mx-5;
+}
+
+#pricing .billing .header p {
+    @apply text-xl text-gray-500;
+}
+
+#pricing .billing .header p strong {
+    @apply text-5xl text-gray-900;
+}
+
+#pricing .billing .body {
+    @apply border-b border-b-gray-300 mx-5;
+}
+
+#pricing .billing .body ul {
+    @apply text-gray-400 py-4 leading-7 list-outside flex flex-col gap-3;
+}
+
+#pricing .billing .body ul li {
+    @apply flex gap-4 items-start;
+}
+
+#pricing .billing .body ul li embed {
+    @apply mt-1.5 md:mt-0 md:w-5 md:h-6;
+}
+
+#pricing .billing .footer {
+    @apply mt-5 md:mt-4 md:px-5;
+}
+
+#pricing .billing .footer a {
+    @apply text-white md:text-xl lg:text-base py-3 md:px-5 md:py-4 bg-dodger-blue-100 hover:bg-dodger-blue-80 transition-colors rounded-md flex justify-center items-center gap-3;
+}
